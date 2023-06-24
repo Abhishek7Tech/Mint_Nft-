@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react"
-import { ArrowForwardIcon } from "@chakra-ui/icons"
+// import { ArrowForwardIcon } from "@chakra-ui/icons"
 import {useWalletModal} from "@solana/wallet-adapter-react-ui";
 import {useWallet} from "@solana/wallet-adapter-react";
 
@@ -56,7 +56,7 @@ const Disconnected: FC = () => {
         >
           <HStack>
             <Text>become a buildoor</Text>
-            <ArrowForwardIcon />
+            {/* <ArrowForwardIcon /> */}
           </HStack>
         </Button>
       </VStack>
