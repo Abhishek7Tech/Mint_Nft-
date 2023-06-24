@@ -2,7 +2,7 @@ import { HStack, Spacer } from "@chakra-ui/react"
 import { FC, FunctionComponent, ReactElement, ReactHTMLElement } from "react"
 import styles from "../app/page.module.css"
 import dynamic from "next/dynamic";
-// import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 // import wallet dynamically //
 const WalletMultiButtonDynamic = dynamic(
@@ -13,6 +13,7 @@ const WalletMultiButtonDynamic = dynamic(
 const NavBar: FC = () => {
   return (
     <HStack width="full" padding={4}>
+      <WalletMultiButton/>
       <WalletMultiButtonDynamic className={styles["wallet-adapter-button-trigger"]}/>
     </HStack>
   )

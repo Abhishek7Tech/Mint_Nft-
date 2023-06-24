@@ -6,6 +6,7 @@ import type { AppProps } from "next/app"
 
 
 import { extendTheme } from "@chakra-ui/react"
+import WalletContextProvider from '@/components/WalletContextProvider'
 
 const colors = {
   background: "#1F1F1F",
@@ -23,7 +24,9 @@ export function Providers({
   return (
     <CacheProvider>
       <ChakraProvider theme={theme}>
-        {children}
+        <WalletContextProvider>
+          {children}
+        </WalletContextProvider>
       </ChakraProvider>
     </CacheProvider>
   )

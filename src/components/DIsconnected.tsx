@@ -20,14 +20,19 @@ const Disconnected: FC = () => {
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
+      event.preventDefault();
       if(event.defaultPrevented) {
-        return
+        return;
       }
-
+      console.log("Clicked");
       if(!wallet) {
+      console.log("Clicked2");
+
         modalState.setVisible(true);
       }else {
-        connect().catch(() => {})
+      console.log("Clicked3");
+
+        connect().catch((err) => {console.log("ERR", err)})
       }
     },[wallet, connect, modalState]
   )
