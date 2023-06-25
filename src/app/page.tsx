@@ -3,9 +3,9 @@
 import styles from './page.module.css'
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react"
 import Head from "next/head"
-import NavBar from '@/components/NavBar'
-import Disconnected from '@/components/DIsconnected';
-import Connected from '@/components/Connected';
+import NavBar from '../components/NavBar';
+import Disconnected from '../components/DIsconnected';
+import Connected from '../components/Connected';
 import {useWallet} from "@solana/wallet-adapter-react";
 
 export default function Home() {

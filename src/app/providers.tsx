@@ -2,7 +2,7 @@
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react"
-import WalletContextProvider from '@/components/WalletContextProvider'
+import WalletContextProvider from '../components/WalletContextProvider'
 
 
 const colors = {
@@ -21,9 +21,9 @@ export function Providers({
   return (
     <CacheProvider>
       <ChakraProvider theme={theme}>
-        <WalletContextProvider>
-          {children}
-        </WalletContextProvider> 
+      <WalletContextProvider>
+        {children}
+      </WalletContextProvider> 
       </ChakraProvider>
     </CacheProvider>
   )
